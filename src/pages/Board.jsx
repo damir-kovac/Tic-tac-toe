@@ -94,6 +94,9 @@ const Board = () => {
                 handleEndGame(f3.innerText);
             }
         }
+        if(f1.innerText && f2.innerText && f3.innerText && f4.innerText && f5.innerText && f6.innerText && f7.innerText && f8.innerText && f9.innerText ){
+            handleEndGame();
+        }
     }
 
     const markField = (e) =>{
