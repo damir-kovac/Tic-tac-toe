@@ -9,13 +9,14 @@ const Board = () => {
         setIsDone(true);
     }
     
-    const reload = () =>{
+    const reset = () =>{
         const board = document.getElementsByClassName("field")
         for (const field of board) {
             field.innerText = "";
             field.classList.remove("win");
         }
         setIsDone(false);
+        setCurrentMark("X");
     }
 
     const checkBoard = () =>{
@@ -134,7 +135,15 @@ const Board = () => {
                     <div id='33' className='field' onClick={markField}></div>
                 </div>
             </div>
-            {isDone && <div><button type='button' onClick={reload}>Play Again</button></div>}
+            <div>
+                <button 
+                    type='button' 
+                    className={isDone ? "button buttonGameOver" : "button"}
+                    onClick={reset}
+                >
+                    Play Again
+                </button>
+            </div>
         </div>
     )
 }
