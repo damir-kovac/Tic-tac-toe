@@ -16,10 +16,8 @@ body{
 #container{
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vw;
-    max-width: 500px;
-    max-height: 500px;
+    width: 500px;
+    height: 500px;
     margin: auto;
     margin-top: 50px;
     cursor: pointer;
@@ -34,9 +32,10 @@ body{
 }
 .row *{
     width: calc(1/3 * 100%);
+}
+.field {
     font-size: 150px;
     text-align: center;
-    
 }
 
 .field:hover{
@@ -70,4 +69,15 @@ body{
 }
 .buttonGameOver{
     background-color: rgba(255, 123, 123, 0.669);
+}
+
+@media (max-width: 520px){
+    #container{
+        width: 350px;
+        height: 350px;
+    }
+
+    .field{
+        font-size: 100px;
+    }
 }
