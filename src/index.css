@@ -16,8 +16,10 @@ body{
 #container{
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 500px;
+    width: 100vw;
+    height: 100vw;
+    max-width: 500px;
+    max-height: 500px;
     margin: auto;
     margin-top: 50px;
     cursor: pointer;
